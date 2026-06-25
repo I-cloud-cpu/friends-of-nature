@@ -1,12 +1,19 @@
 ---
-description: Run AgentShield against agent, hook, MCP, permission, and secret surfaces.
-agent: everything-claude-code:security-reviewer
+description: Security review of agent, hook, MCP, permission, and secret surfaces (optional AgentShield scanner).
+agent: security-reviewer
 subtask: true
 ---
 
 # Security Scan Command
 
-Run AgentShield against the current project or a target path, then turn the findings into a prioritized remediation plan.
+Review the current project (or a target path) for security issues across agent, hook, MCP,
+permission, and secret surfaces, then turn findings into a prioritized remediation plan.
+
+> **Availability:** The deterministic AgentShield scanner below is an *optional external* npm
+> package (`ecc-agentshield`), network-fetched via `npx` — it is **not bundled** with this repo.
+> If it is unavailable (offline, or Claude Code on the web), skip the scanner and run the
+> **Review Checklist** manually via the `security-reviewer` agent. The checklist needs no
+> external tooling and becomes the source of truth in that case.
 
 ## Usage
 
@@ -81,9 +88,9 @@ Use AgentShield in GitHub Actions for enforced gates:
 
 ## Links
 
-- Skill: `skills/security-scan/SKILL.md`
-- Agent: `agents/security-reviewer.md`
-- Scanner: <https://github.com/affaan-m/agentshield>
+- Agent: `.claude/agents/security-reviewer.md` (installed)
+- Rules: `.claude/rules/common/security.md`, `.claude/rules/web/security.md`, `.claude/rules/react/security.md`, `.claude/rules/typescript/security.md`
+- Optional external scanner: <https://github.com/affaan-m/agentshield> (not bundled; network-fetched via `npx ecc-agentshield`)
 
 ## Arguments
 

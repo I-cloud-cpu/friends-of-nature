@@ -21,22 +21,25 @@ Follow the project rules under `.claude/rules/` when writing or reviewing code:
 
 ## Installed tooling (curated from ECC)
 
-**Skills** (`.claude/skills/`) — model-invoked when relevant:
+**Skills (25)** (`.claude/skills/`) — model-invoked when relevant:
 design-system, frontend-design-direction, make-interfaces-feel-better, accessibility,
 frontend-a11y, frontend-patterns, react-patterns, react-performance, react-testing,
 nextjs-turbopack, motion-foundations, motion-patterns, motion-ui, seo, content-engine,
 brand-voice, brand-discovery, e2e-testing, error-handling, deployment-patterns,
-docker-patterns, api-design, backend-patterns, coding-standards.
+docker-patterns, api-design, backend-patterns, coding-standards, tdd-workflow.
 
-**Agents** (`.claude/agents/`): a11y-architect, react-reviewer, react-build-resolver,
+**Agents (15)** (`.claude/agents/`): a11y-architect, react-reviewer, react-build-resolver,
 typescript-reviewer, seo-specialist, code-reviewer, code-simplifier, refactor-cleaner,
 performance-optimizer, security-reviewer, silent-failure-hunter, e2e-runner, architect,
-doc-updater.
+planner, doc-updater.
 
-**Commands** (`.claude/commands/`): /code-review, /feature-dev, /plan, /react-review,
+**Commands (8)** (`.claude/commands/`): /feature-dev, /plan, /react-review,
 /react-build, /react-test, /security-scan, /test-coverage, /pr.
+(General code review uses Claude Code's built-in `/code-review` and `/review`.)
 
-**MCP** (`.mcp.json`): `chrome-devtools` — for inspecting and debugging the running site.
+**MCP** (`.mcp.json`): `chrome-devtools` — for inspecting/debugging the running site.
+Note: project MCP servers load only in a **local Claude Code** session (after approval/restart)
+and require a Chrome/Chromium browser. It is **not active in Claude Code on the web**.
 
 ## Deliberately excluded from ECC
 
