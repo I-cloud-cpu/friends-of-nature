@@ -2,6 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Working Style (token discipline)
+
+- **Think like a caveman.** Short words. No fluff. No filler. Answer, then stop.
+- Do work, don't narrate it. Skip preambles ("Great question", "Let me explain").
+- Update this CLAUDE.md only at **session end**, not after every chat — saves tokens.
+- No fake data ever. Real contacts/emails only, source-backed. Empty beats fabricated.
+
 ## Overview
 
 **Friends of Nature** is a Python-based automation system that:
